@@ -149,4 +149,46 @@ class DateTest {
     );
   }
 
+  @Test
+  void date_equals_givenNonDateObject() {
+    Date d1 = new Date(2000,2,10);
+    int d2 = 50;
+    assertFalse(d1.equals(d2));
+  }
+  @Test
+  void date_toString_givenValidDate() {
+    Date d1 = new Date(2021,1,10);
+    String expectedToString = d1.getYear() + "/January/" + d1.getDay();
+
+    assertEquals(expectedToString, d1.toString());
+  }
+
+  @Test
+  void date_equals_givenSameDate() {
+    Date d1 = new Date(2021,1,1);
+    Date d2 = new Date(2021,1,1);
+    assertTrue(d1.equals(d2));
+  }
+
+  @Test
+  void date_equals_givenNotSameDate() {
+    Date d1 = new Date(2020,1,1);
+    Date d2 = new Date(2021,2,3);
+    assertFalse(d1.equals(d2));
+  }
+
+  @Test
+  void date_equals_givenNotSameDate2() {
+    Date d1 = new Date(2020,1,1);
+    Date d2 = new Date(2020,2,3);
+    assertFalse(d1.equals(d2));
+  }
+
+  @Test
+  void date_equals_givenNotSameDate3() {
+    Date d1 = new Date(2020,1,1);
+    Date d2 = new Date(2020,1,3);
+    assertFalse(d1.equals(d2));
+  }
+
 }
