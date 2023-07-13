@@ -23,9 +23,11 @@ Implementation des tests dans le fichier TwitterTest.java
 
 Lorsqu'on execute avec les nouveaux test, on a ces deux failures:
 
+
 ![failures](https://github.com/Abdelaziz64/seg3503_playground/assets/90732437/a71e66bf-2c78-45a6-8178-a0dcce01362b)
 
 On change donc la methode isMentinned dans Twitter.java
+
 
 ![twitter](https://github.com/Abdelaziz64/seg3503_playground/assets/90732437/f68076c9-4b86-4247-a764-ea734769f8bc)
 
